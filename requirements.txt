@@ -1,0 +1,35 @@
+# Pin exact versions after your first successful install:  pip freeze > requirements.txt
+# --- ML ---
+torch
+pytorch-tabnet
+scikit-learn
+imbalanced-learn
+xgboost
+pandas
+numpy
+joblib
+matplotlib
+seaborn
+# --- Backend ---
+fastapi
+uvicorn[standard]
+sqlalchemy
+pydantic
+pydantic-settings
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+fpdf2
+# --- Frontend ---
+streamlit
+plotly
+requests
+# --- Dev / testing ---
+pytest
+httpx
+jupyter
+ruff
+black
+# --- Optional (uncomment if used) ---
+# shap
+# optuna

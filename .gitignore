@@ -1,0 +1,30 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Secrets
+.env
+
+# Data and generated output
+ai/data/raw/*
+!ai/data/raw/.gitkeep
+ai/data/processed/*
+!ai/data/processed/.gitkeep
+reports/*
+!reports/.gitkeep
+*.db
+*.sqlite3
+
+# Model artifacts (large)
+ai/artifacts/*
+!ai/artifacts/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
