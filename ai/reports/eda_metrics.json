@@ -1,0 +1,1075 @@
+{
+  "dataset_shape": {
+    "rows": 200000,
+    "columns": 24
+  },
+  "missing_and_duplicates": {
+    "null_counts": {
+      "Customer_ID": 0,
+      "Customer_Name": 0,
+      "Gender": 0,
+      "Age": 0,
+      "State": 0,
+      "City": 0,
+      "Bank_Branch": 0,
+      "Account_Type": 0,
+      "Transaction_ID": 0,
+      "Transaction_Date": 0,
+      "Transaction_Time": 0,
+      "Transaction_Amount": 0,
+      "Merchant_ID": 0,
+      "Transaction_Type": 0,
+      "Merchant_Category": 0,
+      "Account_Balance": 0,
+      "Transaction_Device": 0,
+      "Transaction_Location": 0,
+      "Device_Type": 0,
+      "Is_Fraud": 0,
+      "Transaction_Currency": 0,
+      "Customer_Contact": 0,
+      "Transaction_Description": 0,
+      "Customer_Email": 0
+    },
+    "null_percentages": {
+      "Customer_ID": 0.0,
+      "Customer_Name": 0.0,
+      "Gender": 0.0,
+      "Age": 0.0,
+      "State": 0.0,
+      "City": 0.0,
+      "Bank_Branch": 0.0,
+      "Account_Type": 0.0,
+      "Transaction_ID": 0.0,
+      "Transaction_Date": 0.0,
+      "Transaction_Time": 0.0,
+      "Transaction_Amount": 0.0,
+      "Merchant_ID": 0.0,
+      "Transaction_Type": 0.0,
+      "Merchant_Category": 0.0,
+      "Account_Balance": 0.0,
+      "Transaction_Device": 0.0,
+      "Transaction_Location": 0.0,
+      "Device_Type": 0.0,
+      "Is_Fraud": 0.0,
+      "Transaction_Currency": 0.0,
+      "Customer_Contact": 0.0,
+      "Transaction_Description": 0.0,
+      "Customer_Email": 0.0
+    },
+    "exact_duplicates": 0,
+    "unique_transaction_ids": 200000,
+    "duplicate_transaction_ids": 0,
+    "unique_customer_ids": 200000,
+    "unique_merchant_ids": 200000
+  },
+  "target_distribution": {
+    "total_records": 200000,
+    "non_fraud_count": 189912,
+    "fraud_count": 10088,
+    "non_fraud_percentage": 94.956,
+    "fraud_percentage": 5.044,
+    "imbalance_ratio": 18.8255
+  },
+  "numerical_features": {
+    "features": {
+      "Age": {
+        "overall": {
+          "mean": 44.01511,
+          "std": 15.288774326969515,
+          "median": 44.0,
+          "min": 18.0,
+          "max": 70.0,
+          "p25": 31.0,
+          "p75": 57.0,
+          "p99": 70.0,
+          "skewness": 0.0026443514424875653,
+          "kurtosis": -1.2002993271103384,
+          "negative_count": 0,
+          "zero_count": 0
+        },
+        "non_fraud": {
+          "mean": 44.02045684316947,
+          "std": 15.290049816731816,
+          "median": 44.0,
+          "min": 18.0,
+          "max": 70.0,
+          "p25": 31.0,
+          "p75": 57.0,
+          "p99": 70.0
+        },
+        "fraud": {
+          "mean": 43.914452815226014,
+          "std": 15.265149901159232,
+          "median": 44.0,
+          "min": 18.0,
+          "max": 70.0,
+          "p25": 31.0,
+          "p75": 57.0,
+          "p99": 70.0
+        },
+        "tests": {
+          "t_statistic": -0.6785984363630496,
+          "t_pvalue": 0.49739311904783307,
+          "mannwhitney_pvalue": 0.49756177360839526,
+          "anova_f_stat": 0.46049583783438325,
+          "anova_f_pvalue": 0.4973931190478296,
+          "kruskal_h_stat": 0.46013322373764975,
+          "kruskal_h_pvalue": 0.4975617174746333
+        }
+      },
+      "Transaction_Amount": {
+        "overall": {
+          "mean": 49538.0155542,
+          "std": 28551.874003822944,
+          "median": 49502.44,
+          "min": 10.29,
+          "max": 98999.98,
+          "p25": 24851.344999999998,
+          "p75": 74314.625,
+          "p99": 97989.52390000001,
+          "skewness": -0.0004718979360136423,
+          "kurtosis": -1.1981949320155416,
+          "negative_count": 0,
+          "zero_count": 0
+        },
+        "non_fraud": {
+          "mean": 49551.83137979696,
+          "std": 28541.881772128927,
+          "median": 49517.42,
+          "min": 10.29,
+          "max": 98999.98,
+          "p25": 24877.685,
+          "p75": 74326.8725,
+          "p99": 97981.09509999998
+        },
+        "fraud": {
+          "mean": 49277.925241871526,
+          "std": 28739.51884326763,
+          "median": 49162.945,
+          "min": 10.41,
+          "max": 98999.02,
+          "p25": 24420.042500000003,
+          "p75": 74068.7175,
+          "p99": 98082.2532
+        },
+        "tests": {
+          "t_statistic": -0.938924691321401,
+          "t_pvalue": 0.34777054494360893,
+          "mannwhitney_pvalue": 0.3494137929195462,
+          "anova_f_stat": 0.881579575972947,
+          "anova_f_pvalue": 0.34777054494362014,
+          "kruskal_h_stat": 0.875585084083901,
+          "kruskal_h_pvalue": 0.3494137473501646
+        }
+      },
+      "Account_Balance": {
+        "overall": {
+          "mean": 52437.98878355,
+          "std": 27399.507128068526,
+          "median": 52372.555,
+          "min": 5000.82,
+          "max": 99999.95,
+          "p25": 28742.395,
+          "p75": 76147.67,
+          "p99": 99058.32370000001,
+          "skewness": 0.0038724569192382123,
+          "kurtosis": -1.1976515612972047,
+          "negative_count": 0,
+          "zero_count": 0
+        },
+        "non_fraud": {
+          "mean": 52437.197165792575,
+          "std": 27404.82944472395,
+          "median": 52373.715,
+          "min": 5000.82,
+          "max": 99998.68,
+          "p25": 28723.8875,
+          "p75": 76148.875,
+          "p99": 99058.2463
+        },
+        "fraud": {
+          "mean": 52452.891411578115,
+          "std": 27300.467424051465,
+          "median": 52344.725000000006,
+          "min": 5003.42,
+          "max": 99999.95,
+          "p25": 29122.9875,
+          "p75": 76116.0325,
+          "p99": 99052.64939999997
+        },
+        "tests": {
+          "t_statistic": 0.05606093792695353,
+          "t_pvalue": 0.9552933179941194,
+          "mannwhitney_pvalue": 0.9542406085606543,
+          "anova_f_stat": 0.0031428287612476147,
+          "anova_f_pvalue": 0.9552933179941344,
+          "kruskal_h_stat": 0.0032927462598360438,
+          "kruskal_h_pvalue": 0.9542405380339263
+        }
+      }
+    },
+    "pearson_correlation": {
+      "Age": {
+        "Age": 1.0,
+        "Transaction_Amount": -0.0030869568525225743,
+        "Account_Balance": 0.00026861081287288783,
+        "Is_Fraud": -0.0015173980732457284
+      },
+      "Transaction_Amount": {
+        "Age": -0.0030869568525225743,
+        "Transaction_Amount": 1.0,
+        "Account_Balance": -0.0017351974452351872,
+        "Is_Fraud": -0.0020995053058798074
+      },
+      "Account_Balance": {
+        "Age": 0.00026861081287288783,
+        "Transaction_Amount": -0.0017351974452351872,
+        "Account_Balance": 1.0,
+        "Is_Fraud": 0.00012535669388712308
+      },
+      "Is_Fraud": {
+        "Age": -0.0015173980732457284,
+        "Transaction_Amount": -0.0020995053058798074,
+        "Account_Balance": 0.00012535669388712308,
+        "Is_Fraud": 1.0
+      }
+    },
+    "spearman_correlation": {
+      "Age": {
+        "Age": 1.0,
+        "Transaction_Amount": -0.0030751477743522835,
+        "Account_Balance": 0.00026801995435107477,
+        "Is_Fraud": -0.0015167984776232584
+      },
+      "Transaction_Amount": {
+        "Age": -0.0030751477743522835,
+        "Transaction_Amount": 1.0,
+        "Account_Balance": -0.0017494368020110704,
+        "Is_Fraud": -0.0020923544896024695
+      },
+      "Account_Balance": {
+        "Age": 0.00026801995435107477,
+        "Transaction_Amount": -0.0017494368020110704,
+        "Account_Balance": 1.0,
+        "Is_Fraud": 0.0001283113930541823
+      },
+      "Is_Fraud": {
+        "Age": -0.0015167984776232584,
+        "Transaction_Amount": -0.0020923544896024695,
+        "Account_Balance": 0.0001283113930541823,
+        "Is_Fraud": 1.0
+      }
+    }
+  },
+  "categorical_features": {
+    "Gender": {
+      "categories": [
+        {
+          "Gender": "Female",
+          "total": 99548,
+          "fraud_count": 5007,
+          "fraud_rate": 5.029734399485675,
+          "percentage_of_all": 49.77
+        },
+        {
+          "Gender": "Male",
+          "total": 100452,
+          "fraud_count": 5081,
+          "fraud_rate": 5.058137219766655,
+          "percentage_of_all": 50.23
+        }
+      ],
+      "cardinality": 2,
+      "chi2_stat": 0.07838871026567201,
+      "chi2_pvalue": 0.7794929726786605,
+      "degrees_of_freedom": 1,
+      "cramers_v": 0.0006260539524101418
+    },
+    "Account_Type": {
+      "categories": [
+        {
+          "Account_Type": "Business",
+          "total": 66483,
+          "fraud_count": 3436,
+          "fraud_rate": 5.168238497059399,
+          "percentage_of_all": 33.24
+        },
+        {
+          "Account_Type": "Checking",
+          "total": 66924,
+          "fraud_count": 3303,
+          "fraud_rate": 4.935449166218397,
+          "percentage_of_all": 33.46
+        },
+        {
+          "Account_Type": "Savings",
+          "total": 66593,
+          "fraud_count": 3349,
+          "fraud_rate": 5.029057108104455,
+          "percentage_of_all": 33.3
+        }
+      ],
+      "cardinality": 3,
+      "chi2_stat": 3.820026915191512,
+      "chi2_pvalue": 0.1480783938028894,
+      "degrees_of_freedom": 2,
+      "cramers_v": 0.004370370073112523
+    },
+    "Transaction_Type": {
+      "categories": [
+        {
+          "Transaction_Type": "Bill Payment",
+          "total": 40040,
+          "fraud_count": 1973,
+          "fraud_rate": 4.927572427572428,
+          "percentage_of_all": 20.02
+        },
+        {
+          "Transaction_Type": "Credit",
+          "total": 40180,
+          "fraud_count": 2048,
+          "fraud_rate": 5.097063215530114,
+          "percentage_of_all": 20.09
+        },
+        {
+          "Transaction_Type": "Debit",
+          "total": 40050,
+          "fraud_count": 2033,
+          "fraud_rate": 5.0761548064918856,
+          "percentage_of_all": 20.03
+        },
+        {
+          "Transaction_Type": "Transfer",
+          "total": 39953,
+          "fraud_count": 2073,
+          "fraud_rate": 5.188596601006182,
+          "percentage_of_all": 19.98
+        },
+        {
+          "Transaction_Type": "Withdrawal",
+          "total": 39777,
+          "fraud_count": 1961,
+          "fraud_rate": 4.929984664504613,
+          "percentage_of_all": 19.89
+        }
+      ],
+      "cardinality": 5,
+      "chi2_stat": 4.279553707115149,
+      "chi2_pvalue": 0.36949239454344807,
+      "degrees_of_freedom": 4,
+      "cramers_v": 0.004625772209650595
+    },
+    "Merchant_Category": {
+      "categories": [
+        {
+          "Merchant_Category": "Clothing",
+          "total": 33340,
+          "fraud_count": 1734,
+          "fraud_rate": 5.200959808038393,
+          "percentage_of_all": 16.67
+        },
+        {
+          "Merchant_Category": "Electronics",
+          "total": 33409,
+          "fraud_count": 1681,
+          "fraud_rate": 5.0315783172199104,
+          "percentage_of_all": 16.7
+        },
+        {
+          "Merchant_Category": "Entertainment",
+          "total": 33421,
+          "fraud_count": 1612,
+          "fraud_rate": 4.823314682385327,
+          "percentage_of_all": 16.71
+        },
+        {
+          "Merchant_Category": "Groceries",
+          "total": 33187,
+          "fraud_count": 1722,
+          "fraud_rate": 5.188778738662729,
+          "percentage_of_all": 16.59
+        },
+        {
+          "Merchant_Category": "Health",
+          "total": 33118,
+          "fraud_count": 1651,
+          "fraud_rate": 4.985204420556797,
+          "percentage_of_all": 16.56
+        },
+        {
+          "Merchant_Category": "Restaurant",
+          "total": 33525,
+          "fraud_count": 1688,
+          "fraud_rate": 5.035048471290082,
+          "percentage_of_all": 16.76
+        }
+      ],
+      "cardinality": 6,
+      "chi2_stat": 6.821063199499423,
+      "chi2_pvalue": 0.2342918267877535,
+      "degrees_of_freedom": 5,
+      "cramers_v": 0.005839975684666599
+    },
+    "Device_Type": {
+      "categories": [
+        {
+          "Device_Type": "ATM",
+          "total": 50055,
+          "fraud_count": 2518,
+          "fraud_rate": 5.030466486864449,
+          "percentage_of_all": 25.03
+        },
+        {
+          "Device_Type": "Desktop",
+          "total": 49872,
+          "fraud_count": 2544,
+          "fraud_rate": 5.101058710298364,
+          "percentage_of_all": 24.94
+        },
+        {
+          "Device_Type": "Mobile",
+          "total": 49962,
+          "fraud_count": 2493,
+          "fraud_rate": 4.9897922421039995,
+          "percentage_of_all": 24.98
+        },
+        {
+          "Device_Type": "POS",
+          "total": 50111,
+          "fraud_count": 2533,
+          "fraud_rate": 5.054778391969827,
+          "percentage_of_all": 25.06
+        }
+      ],
+      "cardinality": 4,
+      "chi2_stat": 0.6768232110946719,
+      "chi2_pvalue": 0.8786413453183752,
+      "degrees_of_freedom": 3,
+      "cramers_v": 0.0018395967100082995
+    },
+    "Transaction_Device": {
+      "categories": [
+        {
+          "Transaction_Device": "ATM",
+          "total": 21200,
+          "fraud_count": 1033,
+          "fraud_rate": 4.872641509433962,
+          "percentage_of_all": 10.6
+        },
+        {
+          "Transaction_Device": "ATM Booth Kiosk",
+          "total": 21149,
+          "fraud_count": 1082,
+          "fraud_rate": 5.116081138588113,
+          "percentage_of_all": 10.57
+        },
+        {
+          "Transaction_Device": "Bank Branch",
+          "total": 7855,
+          "fraud_count": 375,
+          "fraud_rate": 4.774029280712922,
+          "percentage_of_all": 3.93
+        },
+        {
+          "Transaction_Device": "Banking Chatbot",
+          "total": 7995,
+          "fraud_count": 378,
+          "fraud_rate": 4.727954971857411,
+          "percentage_of_all": 4.0
+        },
+        {
+          "Transaction_Device": "Biometric Scanner",
+          "total": 7952,
+          "fraud_count": 429,
+          "fraud_rate": 5.394869215291751,
+          "percentage_of_all": 3.98
+        },
+        {
+          "Transaction_Device": "Debit/Credit Card",
+          "total": 8273,
+          "fraud_count": 455,
+          "fraud_rate": 5.499818687296023,
+          "percentage_of_all": 4.14
+        },
+        {
+          "Transaction_Device": "Desktop/Laptop",
+          "total": 8057,
+          "fraud_count": 411,
+          "fraud_rate": 5.1011542757850314,
+          "percentage_of_all": 4.03
+        },
+        {
+          "Transaction_Device": "Mobile Device",
+          "total": 7879,
+          "fraud_count": 397,
+          "fraud_rate": 5.03871049625587,
+          "percentage_of_all": 3.94
+        },
+        {
+          "Transaction_Device": "POS Mobile App",
+          "total": 7868,
+          "fraud_count": 391,
+          "fraud_rate": 4.969496695475343,
+          "percentage_of_all": 3.93
+        },
+        {
+          "Transaction_Device": "POS Mobile Device",
+          "total": 8006,
+          "fraud_count": 406,
+          "fraud_rate": 5.071196602548089,
+          "percentage_of_all": 4.0
+        },
+        {
+          "Transaction_Device": "POS Terminal",
+          "total": 7848,
+          "fraud_count": 365,
+          "fraud_rate": 4.6508664627930685,
+          "percentage_of_all": 3.92
+        },
+        {
+          "Transaction_Device": "Payment Gateway Device",
+          "total": 7874,
+          "fraud_count": 422,
+          "fraud_rate": 5.3594107188214375,
+          "percentage_of_all": 3.94
+        },
+        {
+          "Transaction_Device": "QR Code Scanner",
+          "total": 7938,
+          "fraud_count": 411,
+          "fraud_rate": 5.177626606198035,
+          "percentage_of_all": 3.97
+        },
+        {
+          "Transaction_Device": "Self-service Banking Machine",
+          "total": 21707,
+          "fraud_count": 1057,
+          "fraud_rate": 4.869396968719768,
+          "percentage_of_all": 10.85
+        },
+        {
+          "Transaction_Device": "Smart Card",
+          "total": 8133,
+          "fraud_count": 411,
+          "fraud_rate": 5.053485798598303,
+          "percentage_of_all": 4.07
+        },
+        {
+          "Transaction_Device": "Tablet",
+          "total": 8059,
+          "fraud_count": 407,
+          "fraud_rate": 5.050254373991811,
+          "percentage_of_all": 4.03
+        },
+        {
+          "Transaction_Device": "Virtual Card",
+          "total": 8059,
+          "fraud_count": 439,
+          "fraud_rate": 5.4473259709641395,
+          "percentage_of_all": 4.03
+        },
+        {
+          "Transaction_Device": "Voice Assistant",
+          "total": 8039,
+          "fraud_count": 412,
+          "fraud_rate": 5.125015549197661,
+          "percentage_of_all": 4.02
+        },
+        {
+          "Transaction_Device": "Wearable Device",
+          "total": 8128,
+          "fraud_count": 399,
+          "fraud_rate": 4.908956692913386,
+          "percentage_of_all": 4.06
+        },
+        {
+          "Transaction_Device": "Web Browser",
+          "total": 7981,
+          "fraud_count": 408,
+          "fraud_rate": 5.112141335672222,
+          "percentage_of_all": 3.99
+        }
+      ],
+      "cardinality": 20,
+      "chi2_stat": 19.265388037773043,
+      "chi2_pvalue": 0.4399339308648679,
+      "degrees_of_freedom": 19,
+      "cramers_v": 0.009814628886965885
+    },
+    "State": {
+      "categories": [
+        {
+          "State": "Andaman and Nicobar Islands",
+          "total": 5832,
+          "fraud_count": 277,
+          "fraud_rate": 4.749657064471879,
+          "percentage_of_all": 2.92
+        },
+        {
+          "State": "Andhra Pradesh",
+          "total": 5773,
+          "fraud_count": 278,
+          "fraud_rate": 4.815520526589295,
+          "percentage_of_all": 2.89
+        },
+        {
+          "State": "Arunachal Pradesh",
+          "total": 5919,
+          "fraud_count": 288,
+          "fraud_rate": 4.86568677141409,
+          "percentage_of_all": 2.96
+        },
+        {
+          "State": "Assam",
+          "total": 5816,
+          "fraud_count": 290,
+          "fraud_rate": 4.986244841815681,
+          "percentage_of_all": 2.91
+        },
+        {
+          "State": "Bihar",
+          "total": 5857,
+          "fraud_count": 273,
+          "fraud_rate": 4.661089294860851,
+          "percentage_of_all": 2.93
+        },
+        {
+          "State": "Chandigarh",
+          "total": 5797,
+          "fraud_count": 288,
+          "fraud_rate": 4.968086941521477,
+          "percentage_of_all": 2.9
+        },
+        {
+          "State": "Chhattisgarh",
+          "total": 5818,
+          "fraud_count": 286,
+          "fraud_rate": 4.915778618081815,
+          "percentage_of_all": 2.91
+        },
+        {
+          "State": "Dadra and Nagar Haveli and Daman and Diu",
+          "total": 5857,
+          "fraud_count": 305,
+          "fraud_rate": 5.207444084002049,
+          "percentage_of_all": 2.93
+        },
+        {
+          "State": "Delhi",
+          "total": 5943,
+          "fraud_count": 303,
+          "fraud_rate": 5.098435133770822,
+          "percentage_of_all": 2.97
+        },
+        {
+          "State": "Goa",
+          "total": 5871,
+          "fraud_count": 289,
+          "fraud_rate": 4.922500425821836,
+          "percentage_of_all": 2.94
+        },
+        {
+          "State": "Gujarat",
+          "total": 5901,
+          "fraud_count": 278,
+          "fraud_rate": 4.711065921030333,
+          "percentage_of_all": 2.95
+        },
+        {
+          "State": "Haryana",
+          "total": 5947,
+          "fraud_count": 273,
+          "fraud_rate": 4.590549857070792,
+          "percentage_of_all": 2.97
+        },
+        {
+          "State": "Himachal Pradesh",
+          "total": 5875,
+          "fraud_count": 290,
+          "fraud_rate": 4.9361702127659575,
+          "percentage_of_all": 2.94
+        },
+        {
+          "State": "Jharkhand",
+          "total": 5898,
+          "fraud_count": 301,
+          "fraud_rate": 5.103424889793151,
+          "percentage_of_all": 2.95
+        },
+        {
+          "State": "Karnataka",
+          "total": 5775,
+          "fraud_count": 303,
+          "fraud_rate": 5.246753246753247,
+          "percentage_of_all": 2.89
+        },
+        {
+          "State": "Kerala",
+          "total": 5933,
+          "fraud_count": 269,
+          "fraud_rate": 4.533962582167537,
+          "percentage_of_all": 2.97
+        },
+        {
+          "State": "Lakshadweep",
+          "total": 5954,
+          "fraud_count": 332,
+          "fraud_rate": 5.576083305340948,
+          "percentage_of_all": 2.98
+        },
+        {
+          "State": "Madhya Pradesh",
+          "total": 5928,
+          "fraud_count": 315,
+          "fraud_rate": 5.313765182186235,
+          "percentage_of_all": 2.96
+        },
+        {
+          "State": "Maharashtra",
+          "total": 5784,
+          "fraud_count": 294,
+          "fraud_rate": 5.08298755186722,
+          "percentage_of_all": 2.89
+        },
+        {
+          "State": "Manipur",
+          "total": 5869,
+          "fraud_count": 297,
+          "fraud_rate": 5.06048730618504,
+          "percentage_of_all": 2.93
+        },
+        {
+          "State": "Meghalaya",
+          "total": 6003,
+          "fraud_count": 302,
+          "fraud_rate": 5.0308179243711475,
+          "percentage_of_all": 3.0
+        },
+        {
+          "State": "Mizoram",
+          "total": 5892,
+          "fraud_count": 312,
+          "fraud_rate": 5.295315682281059,
+          "percentage_of_all": 2.95
+        },
+        {
+          "State": "Nagaland",
+          "total": 6031,
+          "fraud_count": 312,
+          "fraud_rate": 5.173271430940143,
+          "percentage_of_all": 3.02
+        },
+        {
+          "State": "Odisha",
+          "total": 5899,
+          "fraud_count": 296,
+          "fraud_rate": 5.0177996270554335,
+          "percentage_of_all": 2.95
+        },
+        {
+          "State": "Puducherry",
+          "total": 5828,
+          "fraud_count": 302,
+          "fraud_rate": 5.181880576527111,
+          "percentage_of_all": 2.91
+        },
+        {
+          "State": "Punjab",
+          "total": 5912,
+          "fraud_count": 279,
+          "fraud_rate": 4.7192151556156965,
+          "percentage_of_all": 2.96
+        },
+        {
+          "State": "Rajasthan",
+          "total": 5795,
+          "fraud_count": 268,
+          "fraud_rate": 4.624676445211389,
+          "percentage_of_all": 2.9
+        },
+        {
+          "State": "Sikkim",
+          "total": 5793,
+          "fraud_count": 312,
+          "fraud_rate": 5.385810460901087,
+          "percentage_of_all": 2.9
+        },
+        {
+          "State": "Tamil Nadu",
+          "total": 5841,
+          "fraud_count": 328,
+          "fraud_rate": 5.61547680191748,
+          "percentage_of_all": 2.92
+        },
+        {
+          "State": "Telangana",
+          "total": 5952,
+          "fraud_count": 315,
+          "fraud_rate": 5.29233870967742,
+          "percentage_of_all": 2.98
+        },
+        {
+          "State": "Tripura",
+          "total": 5869,
+          "fraud_count": 308,
+          "fraud_rate": 5.247912761969671,
+          "percentage_of_all": 2.93
+        },
+        {
+          "State": "Uttar Pradesh",
+          "total": 6002,
+          "fraud_count": 295,
+          "fraud_rate": 4.915028323892036,
+          "percentage_of_all": 3.0
+        },
+        {
+          "State": "Uttarakhand",
+          "total": 5985,
+          "fraud_count": 319,
+          "fraud_rate": 5.32999164578112,
+          "percentage_of_all": 2.99
+        },
+        {
+          "State": "West Bengal",
+          "total": 5851,
+          "fraud_count": 311,
+          "fraud_rate": 5.315330712698684,
+          "percentage_of_all": 2.93
+        }
+      ],
+      "cardinality": 34,
+      "chi2_stat": 30.449616830170225,
+      "chi2_pvalue": 0.5947139799635579,
+      "degrees_of_freedom": 33,
+      "cramers_v": 0.012338885044883558
+    },
+    "Transaction_Currency": {
+      "categories": [
+        {
+          "Transaction_Currency": "INR",
+          "total": 200000,
+          "fraud_count": 10088,
+          "fraud_rate": 5.044,
+          "percentage_of_all": 100.0
+        }
+      ],
+      "cardinality": 1,
+      "chi2_stat": 0.0,
+      "chi2_pvalue": 1.0,
+      "degrees_of_freedom": 0,
+      "cramers_v": 0.0
+    }
+  },
+  "temporal_features": {
+    "min_date": "2025-01-01",
+    "max_date": "2025-01-31",
+    "date_range_days": 31,
+    "day_of_week_distribution": [
+      {
+        "DayOfWeek": "Friday",
+        "total": 26492,
+        "fraud_count": 1347,
+        "fraud_rate": 5.084553827570587
+      },
+      {
+        "DayOfWeek": "Monday",
+        "total": 26557,
+        "fraud_count": 1374,
+        "fraud_rate": 5.173777158564597
+      },
+      {
+        "DayOfWeek": "Saturday",
+        "total": 26884,
+        "fraud_count": 1272,
+        "fraud_rate": 4.731438773991965
+      },
+      {
+        "DayOfWeek": "Sunday",
+        "total": 26711,
+        "fraud_count": 1358,
+        "fraud_rate": 5.084047770581408
+      },
+      {
+        "DayOfWeek": "Thursday",
+        "total": 33581,
+        "fraud_count": 1706,
+        "fraud_rate": 5.080253714898306
+      },
+      {
+        "DayOfWeek": "Tuesday",
+        "total": 26435,
+        "fraud_count": 1308,
+        "fraud_rate": 4.947985625118215
+      },
+      {
+        "DayOfWeek": "Wednesday",
+        "total": 33340,
+        "fraud_count": 1723,
+        "fraud_rate": 5.167966406718656
+      }
+    ],
+    "day_of_week_chi2_pvalue": 0.21908030861534525,
+    "hourly_distribution": [
+      {
+        "Hour": 0,
+        "total": 8399,
+        "fraud_count": 447,
+        "fraud_rate": 5.322062150255983
+      },
+      {
+        "Hour": 1,
+        "total": 8266,
+        "fraud_count": 419,
+        "fraud_rate": 5.068957173965642
+      },
+      {
+        "Hour": 2,
+        "total": 8312,
+        "fraud_count": 425,
+        "fraud_rate": 5.113089509143407
+      },
+      {
+        "Hour": 3,
+        "total": 8329,
+        "fraud_count": 436,
+        "fraud_rate": 5.234722055468844
+      },
+      {
+        "Hour": 4,
+        "total": 8319,
+        "fraud_count": 438,
+        "fraud_rate": 5.265055896141363
+      },
+      {
+        "Hour": 5,
+        "total": 8374,
+        "fraud_count": 398,
+        "fraud_rate": 4.752806305230475
+      },
+      {
+        "Hour": 6,
+        "total": 8321,
+        "fraud_count": 431,
+        "fraud_rate": 5.1796659055402
+      },
+      {
+        "Hour": 7,
+        "total": 8505,
+        "fraud_count": 398,
+        "fraud_rate": 4.679600235155791
+      },
+      {
+        "Hour": 8,
+        "total": 8359,
+        "fraud_count": 430,
+        "fraud_rate": 5.144155999521474
+      },
+      {
+        "Hour": 9,
+        "total": 8156,
+        "fraud_count": 431,
+        "fraud_rate": 5.284453163315351
+      },
+      {
+        "Hour": 10,
+        "total": 8400,
+        "fraud_count": 422,
+        "fraud_rate": 5.023809523809524
+      },
+      {
+        "Hour": 11,
+        "total": 8374,
+        "fraud_count": 431,
+        "fraud_rate": 5.146883209935515
+      },
+      {
+        "Hour": 12,
+        "total": 8213,
+        "fraud_count": 384,
+        "fraud_rate": 4.6755144283453065
+      },
+      {
+        "Hour": 13,
+        "total": 8373,
+        "fraud_count": 430,
+        "fraud_rate": 5.135554759345515
+      },
+      {
+        "Hour": 14,
+        "total": 8452,
+        "fraud_count": 404,
+        "fraud_rate": 4.7799337434926645
+      },
+      {
+        "Hour": 15,
+        "total": 8424,
+        "fraud_count": 435,
+        "fraud_rate": 5.163817663817664
+      },
+      {
+        "Hour": 16,
+        "total": 8373,
+        "fraud_count": 408,
+        "fraud_rate": 4.872805446076675
+      },
+      {
+        "Hour": 17,
+        "total": 8302,
+        "fraud_count": 423,
+        "fraud_rate": 5.0951577933028185
+      },
+      {
+        "Hour": 18,
+        "total": 8295,
+        "fraud_count": 432,
+        "fraud_rate": 5.207956600361664
+      },
+      {
+        "Hour": 19,
+        "total": 8224,
+        "fraud_count": 384,
+        "fraud_rate": 4.669260700389105
+      },
+      {
+        "Hour": 20,
+        "total": 8287,
+        "fraud_count": 417,
+        "fraud_rate": 5.031977796548811
+      },
+      {
+        "Hour": 21,
+        "total": 8293,
+        "fraud_count": 414,
+        "fraud_rate": 4.992162064391656
+      },
+      {
+        "Hour": 22,
+        "total": 8394,
+        "fraud_count": 426,
+        "fraud_rate": 5.0750536097212295
+      },
+      {
+        "Hour": 23,
+        "total": 8256,
+        "fraud_count": 425,
+        "fraud_rate": 5.1477713178294575
+      }
+    ],
+    "hourly_chi2_pvalue": 0.8515291480620357
+  },
+  "leakage_and_quality": {
+    "branch_is_city_branch_redundant": true,
+    "location_is_city_state_redundant": true,
+    "currency_is_constant_inr": true,
+    "unique_transaction_ids": 200000,
+    "unique_customer_ids": 200000,
+    "unique_merchant_ids": 200000,
+    "unique_customer_contacts": 9000,
+    "unique_customer_emails": 4779,
+    "amount_gt_balance_count": 94071,
+    "amount_gt_balance_pct": 47.04,
+    "amount_gt_balance_fraud_rate": 5.001541388950899,
+    "amount_le_balance_fraud_rate": 5.081705670779484,
+    "device_crosstab_chi2_pvalue": 0.24595739373590816
+  }
+}
