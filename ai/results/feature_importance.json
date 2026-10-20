@@ -1,0 +1,210 @@
+{
+  "global_importance": [
+    {
+      "feature": "Amount_to_Balance_Ratio",
+      "importance": 0.23684827713136627,
+      "importance_pct": 16.93537124960515,
+      "rank": 1
+    },
+    {
+      "feature": "Amount_Exceeds_Balance",
+      "importance": 0.17793236228512907,
+      "importance_pct": 12.722704379000268,
+      "rank": 2
+    },
+    {
+      "feature": "Account_Type",
+      "importance": 0.12247189952831083,
+      "importance_pct": 8.75711282884231,
+      "rank": 3
+    },
+    {
+      "feature": "Tx_Hour",
+      "importance": 0.12128691706898885,
+      "importance_pct": 8.672382983576188,
+      "rank": 4
+    },
+    {
+      "feature": "City",
+      "importance": 0.10776453926345002,
+      "importance_pct": 7.705491895796798,
+      "rank": 5
+    },
+    {
+      "feature": "Account_Balance",
+      "importance": 0.1034436062292215,
+      "importance_pct": 7.39653205886813,
+      "rank": 6
+    },
+    {
+      "feature": "Transaction_Type",
+      "importance": 0.09331678074370288,
+      "importance_pct": 6.672433276076061,
+      "rank": 7
+    },
+    {
+      "feature": "Tx_DayOfWeek",
+      "importance": 0.07178126295581423,
+      "importance_pct": 5.132578339372914,
+      "rank": 8
+    },
+    {
+      "feature": "Transaction_Amount",
+      "importance": 0.05431310604516693,
+      "importance_pct": 3.8835520601397833,
+      "rank": 9
+    },
+    {
+      "feature": "Age",
+      "importance": 0.047885998968615694,
+      "importance_pct": 3.4239943816096194,
+      "rank": 10
+    },
+    {
+      "feature": "Merchant_Category",
+      "importance": 0.03962852676197817,
+      "importance_pct": 2.8335600364818325,
+      "rank": 11
+    },
+    {
+      "feature": "Hour_Cos",
+      "importance": 0.038563757276393856,
+      "importance_pct": 2.7574257839889595,
+      "rank": 12
+    },
+    {
+      "feature": "Transaction_Device",
+      "importance": 0.03232450951523226,
+      "importance_pct": 2.3113006171382264,
+      "rank": 13
+    },
+    {
+      "feature": "Gender",
+      "importance": 0.023419323082719528,
+      "importance_pct": 1.6745527374063305,
+      "rank": 14
+    },
+    {
+      "feature": "Hour_Sin",
+      "importance": 0.020573996372721923,
+      "importance_pct": 1.4711032348646647,
+      "rank": 15
+    },
+    {
+      "feature": "Device_Mismatch_Flag",
+      "importance": 0.01933396694188873,
+      "importance_pct": 1.3824373639284409,
+      "rank": 16
+    },
+    {
+      "feature": "State",
+      "importance": 0.019108216673319113,
+      "importance_pct": 1.3662955340015799,
+      "rank": 17
+    },
+    {
+      "feature": "Tx_Day",
+      "importance": 0.017743582985664762,
+      "importance_pct": 1.2687200802129672,
+      "rank": 18
+    },
+    {
+      "feature": "Transaction_Description",
+      "importance": 0.01740797715837721,
+      "importance_pct": 1.244723244147771,
+      "rank": 19
+    },
+    {
+      "feature": "Device_Type",
+      "importance": 0.017064675694589602,
+      "importance_pct": 1.2201761466970626,
+      "rank": 20
+    },
+    {
+      "feature": "Is_Night",
+      "importance": 0.015614763116756922,
+      "importance_pct": 1.1165029932231647,
+      "rank": 21
+    },
+    {
+      "feature": "Is_Weekend",
+      "importance": 0.0007139385511763976,
+      "importance_pct": 0.05104877502178929,
+      "rank": 22
+    }
+  ],
+  "step_importance": {
+    "Step 0": {
+      "Gender": 0.04041141349010377,
+      "State": 0.0018540122431583424,
+      "City": 0.1589803046006517,
+      "Account_Type": 0.0356224413505026,
+      "Transaction_Type": 0.012594610006309277,
+      "Merchant_Category": 0.0348488039614845,
+      "Device_Type": 0.032636420986423005,
+      "Transaction_Device": 0.05530268869955516,
+      "Transaction_Description": 0.020590651649839562,
+      "Age": 0.02350912768811025,
+      "Transaction_Amount": 0.007057276117846082,
+      "Account_Balance": 0.12370348964641453,
+      "Amount_to_Balance_Ratio": 0.056476682953829536,
+      "Tx_Day": 0.004017510883373937,
+      "Tx_Hour": 0.05991581098051981,
+      "Tx_DayOfWeek": 0.11751123578411209,
+      "Hour_Sin": 0.012041385633872546,
+      "Hour_Cos": 0.08268927987050878,
+      "Amount_Exceeds_Balance": 0.08342201594445253,
+      "Is_Weekend": 0.0010627414980457419,
+      "Is_Night": 0.034789574908127306,
+      "Device_Mismatch_Flag": 0.0009625211027590518
+    },
+    "Step 1": {
+      "Gender": 0.002495240142823226,
+      "State": 0.09475478089629535,
+      "City": 0.1494683625966837,
+      "Account_Type": 0.12824562699310865,
+      "Transaction_Type": 0.14197918359422976,
+      "Merchant_Category": 0.03497690643183594,
+      "Device_Type": 0.010094378622009258,
+      "Transaction_Device": 0.0014664486350230248,
+      "Transaction_Description": 0.04239215498229585,
+      "Age": 0.008456675983396276,
+      "Transaction_Amount": 1.6679060378662875e-05,
+      "Account_Balance": 0.0,
+      "Amount_to_Balance_Ratio": 0.2679908277545432,
+      "Tx_Day": 0.03641896680903252,
+      "Tx_Hour": 0.005924106372622095,
+      "Tx_DayOfWeek": 0.038254770562253314,
+      "Hour_Sin": 0.03267471928626641,
+      "Hour_Cos": 0.00255591278929143,
+      "Amount_Exceeds_Balance": 0.0011900079014105576,
+      "Is_Weekend": 0.000583658090397968,
+      "Is_Night": 6.059249610276093e-05,
+      "Device_Mismatch_Flag": 0.0
+    },
+    "Step 2": {
+      "Gender": 0.001452556291314425,
+      "State": 0.021857157683264523,
+      "City": 0.00026108078958254953,
+      "Account_Type": 0.10781225867804164,
+      "Transaction_Type": 0.00025565692894613247,
+      "Merchant_Category": 0.003370219969962567,
+      "Device_Type": 0.0,
+      "Transaction_Device": 0.008482296930523586,
+      "Transaction_Description": 0.00025011810065897423,
+      "Age": 0.06034982762569342,
+      "Transaction_Amount": 0.10859525644571841,
+      "Account_Balance": 0.004660870668586777,
+      "Amount_to_Balance_Ratio": 0.0766572046373085,
+      "Tx_Day": 0.0016600999654389154,
+      "Tx_Hour": 0.16137611836172375,
+      "Tx_DayOfWeek": 0.03039267682625317,
+      "Hour_Sin": 0.0005727919817333031,
+      "Hour_Cos": 0.0004900637507748553,
+      "Amount_Exceeds_Balance": 0.2814447080030196,
+      "Is_Weekend": 8.412001431520245e-05,
+      "Is_Night": 0.0021703899712742915,
+      "Device_Mismatch_Flag": 0.1278045263758653
+    }
+  }
+}

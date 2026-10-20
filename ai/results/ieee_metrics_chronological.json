@@ -1,0 +1,246 @@
+{
+  "logistic_regression": {
+    "model_name": "logistic_regression",
+    "protocol": "chronological_holdout",
+    "n_samples": 50000,
+    "n_train": 40000,
+    "n_val": 10000,
+    "train_ratio": 0.8,
+    "metrics": {
+      "fold": 0,
+      "roc_auc": 0.6947732870859097,
+      "pr_auc": 0.12870457178237768,
+      "recall_at_fpr_1pct": 0.15350877192982457,
+      "f1": 0.17191977077363896,
+      "macro_f1": 0.5786065700339112,
+      "precision": 0.24793388429752067,
+      "recall": 0.13157894736842105,
+      "threshold_tuned": 0.86,
+      "confusion_matrix": {
+        "tn": 9681,
+        "fp": 91,
+        "fn": 198,
+        "tp": 30,
+        "raw": [
+          [
+            9681,
+            91
+          ],
+          [
+            198,
+            30
+          ]
+        ]
+      },
+      "metrics_at_default_05": {
+        "f1": 0.12228260869565218,
+        "macro_f1": 0.506678624491711,
+        "precision": 0.06818181818181818,
+        "recall": 0.5921052631578947,
+        "confusion_matrix": {
+          "tn": 7927,
+          "fp": 1845,
+          "fn": 93,
+          "tp": 135,
+          "raw": [
+            [
+              7927,
+              1845
+            ],
+            [
+              93,
+              135
+            ]
+          ]
+        }
+      },
+      "train_time_sec": 3.57,
+      "infer_time_sec": 0.0,
+      "latency_ms_per_1k": 0.05,
+      "throughput_tx_per_sec": 20440078.0
+    }
+  },
+  "random_forest": {
+    "model_name": "random_forest",
+    "protocol": "chronological_holdout",
+    "n_samples": 50000,
+    "n_train": 40000,
+    "n_val": 10000,
+    "train_ratio": 0.8,
+    "metrics": {
+      "fold": 0,
+      "roc_auc": 0.8702594595370949,
+      "pr_auc": 0.3030320947046775,
+      "recall_at_fpr_1pct": 0.3157894736842105,
+      "f1": 0.34402332361516036,
+      "macro_f1": 0.666288509749789,
+      "precision": 0.5130434782608696,
+      "recall": 0.25877192982456143,
+      "threshold_tuned": 0.57,
+      "confusion_matrix": {
+        "tn": 9716,
+        "fp": 56,
+        "fn": 169,
+        "tp": 59,
+        "raw": [
+          [
+            9716,
+            56
+          ],
+          [
+            169,
+            59
+          ]
+        ]
+      },
+      "metrics_at_default_05": {
+        "f1": 0.37530864197530867,
+        "macro_f1": 0.6811985924854854,
+        "precision": 0.4293785310734463,
+        "recall": 0.3333333333333333,
+        "confusion_matrix": {
+          "tn": 9671,
+          "fp": 101,
+          "fn": 152,
+          "tp": 76,
+          "raw": [
+            [
+              9671,
+              101
+            ],
+            [
+              152,
+              76
+            ]
+          ]
+        }
+      },
+      "train_time_sec": 1.396,
+      "infer_time_sec": 0.048,
+      "latency_ms_per_1k": 4.85,
+      "throughput_tx_per_sec": 206327.3
+    }
+  },
+  "xgboost": {
+    "model_name": "xgboost",
+    "protocol": "chronological_holdout",
+    "n_samples": 50000,
+    "n_train": 40000,
+    "n_val": 10000,
+    "train_ratio": 0.8,
+    "metrics": {
+      "fold": 0,
+      "roc_auc": 0.8838199546143295,
+      "pr_auc": 0.35544217964317276,
+      "recall_at_fpr_1pct": 0.33771929824561403,
+      "f1": 0.36923076923076925,
+      "macro_f1": 0.6783430745694896,
+      "precision": 0.4444444444444444,
+      "recall": 0.3157894736842105,
+      "threshold_tuned": 0.79,
+      "confusion_matrix": {
+        "tn": 9682,
+        "fp": 90,
+        "fn": 156,
+        "tp": 72,
+        "raw": [
+          [
+            9682,
+            90
+          ],
+          [
+            156,
+            72
+          ]
+        ]
+      },
+      "metrics_at_default_05": {
+        "f1": 0.27956989247311825,
+        "macro_f1": 0.6203667031001308,
+        "precision": 0.17987421383647798,
+        "recall": 0.6271929824561403,
+        "confusion_matrix": {
+          "tn": 9120,
+          "fp": 652,
+          "fn": 85,
+          "tp": 143,
+          "raw": [
+            [
+              9120,
+              652
+            ],
+            [
+              85,
+              143
+            ]
+          ]
+        }
+      },
+      "train_time_sec": 0.578,
+      "infer_time_sec": 0.008,
+      "latency_ms_per_1k": 0.82,
+      "throughput_tx_per_sec": 1212296.7
+    }
+  },
+  "tabnet": {
+    "model_name": "tabnet",
+    "protocol": "chronological_holdout",
+    "n_samples": 50000,
+    "n_train": 40000,
+    "n_val": 10000,
+    "train_ratio": 0.8,
+    "metrics": {
+      "fold": 0,
+      "roc_auc": 0.8447154329232823,
+      "pr_auc": 0.25537211567984697,
+      "recall_at_fpr_1pct": 0.20175438596491227,
+      "f1": 0.26244343891402716,
+      "macro_f1": 0.6185775657620247,
+      "precision": 0.2,
+      "recall": 0.3815789473684211,
+      "threshold_tuned": 0.89,
+      "confusion_matrix": {
+        "tn": 9424,
+        "fp": 348,
+        "fn": 141,
+        "tp": 87,
+        "raw": [
+          [
+            9424,
+            348
+          ],
+          [
+            141,
+            87
+          ]
+        ]
+      },
+      "metrics_at_default_05": {
+        "f1": 0.16895674300254454,
+        "macro_f1": 0.5392052913792872,
+        "precision": 0.0955670696603339,
+        "recall": 0.7280701754385965,
+        "confusion_matrix": {
+          "tn": 8201,
+          "fp": 1571,
+          "fn": 62,
+          "tp": 166,
+          "raw": [
+            [
+              8201,
+              1571
+            ],
+            [
+              62,
+              166
+            ]
+          ]
+        }
+      },
+      "train_time_sec": 40.356,
+      "infer_time_sec": 0.289,
+      "latency_ms_per_1k": 28.91,
+      "throughput_tx_per_sec": 34586.7
+    }
+  }
+}

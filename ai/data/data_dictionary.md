@@ -38,3 +38,27 @@
 | `Customer_Contact` | `str` | 0 | 9,000 | Masked synthetic mobile phone number | `+9198579XXXXXX` | **Drop** (Masked synthetic PII) |
 | `Transaction_Description`| `str` | 0 | 172 | Transaction narration text | `Bitcoin transaction`, `Grocery` | **Retain** (Categorical encoding / text categories) |
 | `Customer_Email` | `str` | 0 | 4,779 | Masked synthetic email address | `oshaXXXXX@XXXXX.com` | **Drop** (Masked synthetic PII) |
+
+---
+
+## Engineered Features (Phase 2 & Phase 5)
+
+| Feature Name | Type | Phase | Source Columns | Formula / Derivation | Description |
+| :--- | :--- | :---: | :--- | :--- | :--- |
+| `Amount_to_Balance_Ratio` | Numerical | 2 | `Transaction_Amount`, `Account_Balance` | $\frac{\text{Amount}}{\text{Balance} + 1.0}$ | Financial burden relative to liquid balance |
+| `Amount_Exceeds_Balance` | Binary | 2 | `Transaction_Amount`, `Account_Balance` | $\mathbb{I}(\text{Amount} > \text{Balance})$ | Overdraft indicator flag |
+| `Tx_Hour` | Numerical | 2 | `Transaction_Time` | Hour from timestamp ($0 - 23$) | Diurnal temporal slot |
+| `Tx_Day` | Numerical | 2 | `Transaction_Date` | Day of month ($1 - 31$) | Intra-month day |
+| `Tx_DayOfWeek` | Numerical | 2 | `Transaction_Date` | Day of week ($0 = \text{Mon}, 6 = \text{Sun}$) | Weekly seasonality |
+| `Is_Weekend` | Binary | 2 | `Tx_DayOfWeek` | $\mathbb{I}(\text{DayOfWeek} \ge 5)$ | Weekend flag |
+| `Is_Night` | Binary | 2 | `Tx_Hour` | $\mathbb{I}(\text{Hour} \in \{23, 0, 1, 2, 3, 4, 5\})$ | High-risk night hours flag |
+| `Hour_Sin` / `Hour_Cos` | Numerical | 2 | `Tx_Hour` | $\sin / \cos\left(\frac{2\pi \cdot \text{Hour}}{24}\right)$ | Cyclical trigonometric time representation |
+| `Device_Mismatch_Flag` | Binary | 2 | `Device_Type`, `Transaction_Device` | $\mathbb{I}(\text{Transaction\_Device} \notin \text{Allowed}(\text{Device\_Type}))$ | Telemetry semantic mismatch indicator |
+| `Tx_Day_Phase` | Numerical | 5 | `datetime` | $0$ (Days 1–10), $1$ (Days 11–20), $2$ (Days 21–31) | Paycheck / intra-month temporal phase |
+| `Cat_Amount_Ratio` | Numerical | 5 | `Merchant_Category`, `Transaction_Amount` | $\frac{\text{Amount}}{\text{Expanding\_Cat\_Mean}_{< t} + 1.0}$ | Causal spending deviation relative to merchant vertical |
+| `City_Amount_Ratio` | Numerical | 5 | `City`, `Transaction_Amount` | $\frac{\text{Amount}}{\text{Expanding\_City\_Mean}_{< t} + 1.0}$ | Causal spending deviation relative to municipal average |
+| `Time_Since_Prev_Cat_Tx` | Numerical | 5 | `Merchant_Category`, `datetime` | $t_{\text{current}} - t_{\text{prev in category}}$ (seconds) | Inter-transaction interval within merchant vertical |
+| `Time_Since_Prev_City_Tx` | Numerical | 5 | `City`, `datetime` | $t_{\text{current}} - t_{\text{prev in city}}$ (seconds) | Inter-transaction interval within city |
+| `Cat_Tx_Density_1h` | Numerical | 5 | `Merchant_Category`, `datetime` | Rolling 1h count over $[t - 1\text{h}, t)$ | Causal 1-hour transaction volume in merchant vertical |
+| `City_Tx_Density_1h` | Numerical | 5 | `City`, `datetime` | Rolling 1h count over $[t - 1\text{h}, t)$ | Causal 1-hour transaction volume in city |
+

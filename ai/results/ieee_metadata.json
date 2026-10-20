@@ -1,0 +1,14 @@
+{
+  "dataset": "IEEE-CIS Fraud Detection",
+  "curated_features_count": 46,
+  "sample_size": 50000,
+  "n_splits_cv": 5,
+  "chronological_train_ratio": 0.8,
+  "models_evaluated": [
+    "logistic_regression",
+    "random_forest",
+    "xgboost",
+    "tabnet"
+  ],
+  "timestamp": "2026-10-20 01:34:22"
+}
