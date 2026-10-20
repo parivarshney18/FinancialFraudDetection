@@ -14,10 +14,15 @@ ai/data/raw/*
 !ai/data/raw/.gitkeep
 ai/data/processed/*
 !ai/data/processed/.gitkeep
+ai/data/ieee_cis/raw/*
+!ai/data/ieee_cis/raw/.gitkeep
+ai/data/ieee_cis/processed/*
+!ai/data/ieee_cis/processed/.gitkeep
 reports/*
 !reports/.gitkeep
 *.db
 *.sqlite3
+
 
 # Model artifacts (large)
 ai/artifacts/*
